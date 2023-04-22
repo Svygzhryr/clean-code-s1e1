@@ -37,15 +37,17 @@ var createNewTaskElement=function(taskString){
   
   //Each elements, needs appending
   checkBox.type="checkbox";
+  checkBox.className="input-checkbox task-input";
   editInput.type="text";
-  editInput.className="task-input";
+  editInput.className="task-input input-text";
   
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
   editButton.className="button-edit btn";
   
   deleteButton.className="button-delete btn";
-  deleteButtonImg.src='./remove.svg';
-  deleteButtonImg.className='delete-img';
+  deleteButtonImg.src="./remove.svg";
+  deleteButtonImg.className="delete-img";
+  listItem.className="incomplete-tasks__item"
   deleteButton.appendChild(deleteButtonImg);
   
   
@@ -100,6 +102,7 @@ var editTask=function(){
   
   //toggle .button-edit-mode on the parent.
   listItem.classList.toggle("incomplete-tasks__edit-mode");
+  listItem.classList.toggle("incomplete-tasks__item");
 };
   
   
